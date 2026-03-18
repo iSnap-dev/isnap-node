@@ -6,6 +6,33 @@
 
 Official Node.js/TypeScript SDK for the [iSnap](https://isnap.dev) messaging API. Zero runtime dependencies.
 
+## Why iSnap?
+
+Most messaging APIs route through A2P (Application-to-Person) infrastructure — virtual numbers, carrier filters, 10DLC registration, and per-message fees. The result: **30-60% of messages get blocked before they reach the recipient.**
+
+iSnap is different. It's a **Hardware-as-a-Service telephony platform** that provisions real physical devices (iPhones and Androids) with real SIM cards. Your messages travel as P2P (peer-to-peer) — the same way a human sends a text.
+
+### What this means for developers
+
+| | Traditional A2P (Twilio, Vonage) | iSnap (P2P) |
+|---|---|---|
+| **iMessage** | Not available | Native iMessage from real iPhones |
+| **Delivery rate** | ~40-70% (carrier filtering) | ~95%+ (P2P treatment) |
+| **Registration** | 10DLC, toll-free verification, weeks of setup | None — instant activation |
+| **Pricing** | Per-message fees | Flat monthly per line |
+| **WhatsApp** | Business API with 24h windows and templates | Personal WhatsApp — no restrictions |
+| **Carrier filtering** | Subject to A2P filters | Bypasses filters — messages look human |
+
+### Built for integrators
+
+iSnap is SDK-first. Whether you're building a CRM, an AI agent, or a custom messaging workflow — embed the SDK and give your users access to P2P lines without managing any hardware.
+
+```
+Your App → iSnap SDK → iSnap API → Real Device → Recipient
+```
+
+---
+
 ## Installation
 
 ```bash
