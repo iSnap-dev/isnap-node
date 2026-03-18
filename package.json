@@ -1,0 +1,50 @@
+{
+  "name": "@isnap/sdk",
+  "version": "0.1.0",
+  "description": "Official Node.js/TypeScript SDK for the iSnap messaging API. Zero runtime dependencies.",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./webhook-verify": {
+      "import": "./dist/webhook-verify.js",
+      "types": "./dist/webhook-verify.d.ts"
+    },
+    "./webhooks": {
+      "import": "./dist/webhook-events.js",
+      "types": "./dist/webhook-events.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "iSnap <hello@isnap.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isnap-dev/isnap-node"
+  },
+  "homepage": "https://github.com/isnap-dev/isnap-node#readme",
+  "bugs": {
+    "url": "https://github.com/isnap-dev/isnap-node/issues"
+  },
+  "keywords": ["isnap", "messaging", "sms", "imessage", "p2p", "sdk"],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
